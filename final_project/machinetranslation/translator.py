@@ -11,10 +11,9 @@ url = os.environ['url']
 
 authenticator = IAMAuthenticator(apikey)
 language_translator = LanguageTranslatorV3(
-    version='{version}',
+    version='2018-05-01',
     authenticator=authenticator)
-language_translator.set_service_url(
-    'https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/6f6acd70-d4d2-4c67-a4a2-2fd13c1ee9f1')
+language_translator.set_service_url(url)
 
 def englishtofrench(englishText):
     """Takes english text and translates it to french"""
